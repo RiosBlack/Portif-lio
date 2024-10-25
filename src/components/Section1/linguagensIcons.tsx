@@ -1,24 +1,38 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
+import { motion } from "framer-motion";
 
 type Props = {}
 
 export default function LinguagensIcons({ }: Props) {
   return (
-    <div className='absolute z-10 w-96 h-96 top-[25%] right-[15%]'>
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1
+      }}
+      transition={{ ease: "backIn", duration: 2 }}
+      className='absolute z-10 w-96 h-96 top-[25%] right-[15%]'>
       <Image
         alt='Linhas'
         src={'/linhas.svg'}
         fill
         className='absolute z-10'
       />
-      <Image
-        alt='AwsIco'
-        src={'/IconAws.svg'}
-        width={50}
-        height={50}
-        className='absolute z-10 left-40 top-40'
-      />
+      <motion.div
+        drag
+      >
+        <Image
+          alt='AwsIco'
+          src={'/IconAws.svg'}
+          width={50}
+          height={50}
+          className='absolute z-20 left-40 top-40 cursor-pointer'
+        />
+      </motion.div>
       <Image
         alt='DockerIco'
         src={'/IconDocker.svg'}
@@ -68,6 +82,6 @@ export default function LinguagensIcons({ }: Props) {
         height={50}
         className='absolute z-10 right-3 bottom-14'
       />
-    </div>
+    </motion.div>
   )
 }

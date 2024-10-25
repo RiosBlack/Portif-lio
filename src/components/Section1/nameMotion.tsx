@@ -1,13 +1,26 @@
+"use client"
 import React from 'react'
+import { motion } from "framer-motion";
 
 type Props = {}
 
 export default function NameMotion({ }: Props) {
   return (
-    <div className='absolute z-10 top-[36%] left-32 space-y-2'>
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 200
+      }}
+      animate={{
+        y: 0,
+        opacity: 1
+      }}
+      transition={{ ease: "backIn", duration: 2 }}
+      className='absolute z-10 top-[36%] left-32 space-y-2'
+    >
       <h2 className='text-3xl text-roxo'>Olá, Meu nome é</h2>
       <h1 className='text-5xl ml-16 '>Douglas Rios</h1>
       <h2 className='text-3xl text-roxo'>Sou Desenvolvedor FullStack</h2>
-    </div>
+    </motion.div>
   )
 }
