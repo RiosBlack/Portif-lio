@@ -1,34 +1,69 @@
+'use client'
 import Link from 'next/link'
 import React from 'react'
 import { FaInstagram, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import { motion } from 'framer-motion'
 
 export default function SocialMedia() {
   return (
-    <div className='absolute z-10 right-0 m-4 flex flex-col justify-center items-center'>
+    <motion.div
+      className='absolute z-10 right-0 m-4 flex flex-col justify-center items-center'
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 2.0,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}
+    >
       <div className='bg-slate-800 rounded-xl p-2 flex space-x-2'>
-        <Link
-          href={'/'}
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          <FaInstagram className='w-6 h-6 text-roxo hover:animate-bounce' />
-        </Link>
-        <Link
-          href={'/'}
+          <Link
+            href={'/'}
+          >
+            <FaInstagram className='w-6 h-6 text-roxo' />
+          </Link>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          <FaLinkedin className='w-6 h-6 text-roxo hover:animate-bounce' />
-        </Link>
-        <Link
-          href={'/'}
+          <Link
+            href={'/'}
+          >
+            <FaLinkedin className='w-6 h-6 text-roxo' />
+          </Link>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          <FaGithub className='w-6 h-6 text-roxo hover:animate-bounce' />
-        </Link>
-        <Link
-          href={'/'}
+          <Link
+            href={'/'}
+          >
+            <FaGithub className='w-6 h-6 text-roxo' />
+          </Link>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          <FaWhatsapp className='w-6 h-6 text-roxo hover:animate-bounce' />
-        </Link>
+          <Link
+            href={'/'}
+          >
+            <FaWhatsapp className='w-6 h-6 text-roxo' />
+          </Link>
+        </motion.div>
       </div>
       <h2>Redes sociais</h2>
-    </div>
+    </motion.div>
   )
 }

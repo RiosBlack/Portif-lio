@@ -15,7 +15,7 @@ export default function LinguagensIcons({ }: Props) {
         opacity: 1
       }}
       transition={{ ease: "backIn", duration: 2 }}
-      className='absolute z-10 w-96 h-96 top-[25%] right-[15%]'>
+      className='absolute z-10 w-96 h-96 top-[25%] right-[12%]'>
       <Image
         alt='Linhas'
         src={'/linhas.svg'}
@@ -23,30 +23,71 @@ export default function LinguagensIcons({ }: Props) {
         className='absolute z-10'
       />
       <motion.div
-        drag
+        animate={{
+          scale: [1, 1.2, 1.2, 1, 1, 1.2, 1.2, 1],
+          rotate: [0, 0, 20, 20, 0, 0, -20, -20, 0],
+          borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+        }}
+        transition={{
+          duration: 5,
+          ease: "easeInOut",
+          times: [0, 0.5, 0.8, 1.0, 2],
+          repeat: Infinity,
+          repeatDelay: 1,
+          delay: 3
+        }}
+        className='absolute z-20 left-40 top-40 cursor-pointer'
       >
         <Image
           alt='AwsIco'
           src={'/IconAws.svg'}
           width={50}
           height={50}
-          className='absolute z-20 left-40 top-40 cursor-pointer'
         />
       </motion.div>
-      <Image
-        alt='DockerIco'
-        src={'/IconDocker.svg'}
-        width={50}
-        height={50}
-        className='absolute z-10 left-20 top-8'
-      />
-      <Image
-        alt='GitHubIco'
-        src={'/IconGitHub.svg'}
-        width={50}
-        height={50}
-        className='absolute z-10 top-72 left-20'
-      />
+      <motion.div
+        animate={{
+          rotate: [0, 360, 360, 360, 0, -20, 0, 0, 0],
+          borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+        }}
+        transition={{
+          duration: 5,
+          ease: "easeInOut",
+          times: [0, 1, 1, 0, 0],
+          repeat: Infinity,
+          repeatDelay: 1,
+          delay: 3
+        }}
+        className='absolute z-10 left-20 top-5 cursor-pointer'
+      >
+        <Image
+          alt='DockerIco'
+          src={'/IconDocker.svg'}
+          width={50}
+          height={50}
+        />
+      </motion.div>
+      <motion.div
+        animate={{
+          scale: [1.2, 1, 1.2, 1, 1, 1.2, 1.2, 1],
+        }}
+        transition={{
+          duration: 5,
+          ease: "easeInOut",
+          times: [0, 1, 1, 0, 0],
+          repeat: Infinity,
+          repeatDelay: 1,
+          delay: 3
+        }}
+        className='absolute z-10 top-72 left-14 cursor-pointer'
+      >
+        <Image
+          alt='GitHubIco'
+          src={'/IconGitHub.svg'}
+          width={50}
+          height={50}
+        />
+      </motion.div>
       <Image
         alt='JavaIco'
         src={'/IconJava.svg'}
@@ -54,13 +95,29 @@ export default function LinguagensIcons({ }: Props) {
         height={50}
         className='absolute z-10 left-52 top-20'
       />
-      <Image
-        alt='JavaScriptIco'
-        src={'/IconJavaScript.svg'}
-        width={50}
-        height={50}
-        className='absolute z-10 left-80'
-      />
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1.2, 1, 1, 1.2, 1.2, 1],
+          rotate: [0, 0, 20, 20, 0, 0, -20, -20, 0],
+          borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+        }}
+        transition={{
+          duration: 5,
+          ease: "easeInOut",
+          times: [0, 0.5, 0.8, 1.0, 2],
+          repeat: Infinity,
+          repeatDelay: 1,
+          delay: 3.2
+        }}
+        className='absolute z-10 left-80 cursor-pointer'
+      >
+        <Image
+          alt='JavaScriptIco'
+          src={'/IconJavaScript.svg'}
+          width={50}
+          height={50}
+        />
+      </motion.div>
       <Image
         alt='NextJsIco'
         src={'/IconNextJs.svg'}
@@ -75,13 +132,29 @@ export default function LinguagensIcons({ }: Props) {
         height={50}
         className='absolute z-10 left-20 bottom-52'
       />
-      <Image
-        alt='TsIco'
-        src={'/IconTs.svg'}
-        width={50}
-        height={50}
-        className='absolute z-10 right-3 bottom-14'
-      />
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1.2, 1, 1, 1.2, 1.2, 1],
+          rotate: [0, 0, 20, 20, 0, 0, -20, -20, 0],
+          borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+        }}
+        transition={{
+          duration: 5,
+          ease: "easeInOut",
+          times: [0, 0.5, 0.8, 1.0, 2],
+          repeat: Infinity,
+          repeatDelay: 1,
+          delay: 3.5
+        }}
+        className='absolute z-10 right-3 bottom-14 cursor-pointer'
+      >
+        <Image
+          alt='TsIco'
+          src={'/IconTs.svg'}
+          width={50}
+          height={50}
+        />
+      </motion.div>
     </motion.div>
   )
 }
