@@ -11,10 +11,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        roxo: "#7641DD"
+        roxo: "#7641DD",
+        roxoEscuro: '#050309',
+        azulClaro: '#638ECF'
       },
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 };
 export default config;

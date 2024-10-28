@@ -18,9 +18,9 @@ export default function LogoMotion({ }: Props) {
       <Image
         alt='Logo'
         src={'/logo.svg'}
-        width={79}
-        height={81}
-        className='absolute z-10 right-1/2 m-2'
+        width={69}
+        height={70}
+        className='absolute z-10 right-[47%] m-2'
       />
     </motion.div>
   )
