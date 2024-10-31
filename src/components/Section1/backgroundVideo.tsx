@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-export default function BackgroundVideo({ }: Props) {
+export default function BackgroundVideo() {
   return (
     <div className='relative overflow-hidden w-full h-screen z-0'>
       <div className='w-full h-full absolute bg-black bg-opacity-65'></div>
