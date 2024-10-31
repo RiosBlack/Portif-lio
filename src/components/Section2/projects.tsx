@@ -41,7 +41,7 @@ export default function Projects() {
       <motion.div
         className="text-3xl bg-gradient-to-tr from-slate-50 to-gray-400 bg-clip-text text-transparent font-semibold"
         animate={{
-          x: isHovered ? 170 : 0,
+          x: isHovered ? 100 : 0,
         }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
@@ -94,13 +94,15 @@ export default function Projects() {
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
         {data.map((item) =>
-          <Image
-            key={item.Index}
-            alt="Foto"
-            src={item.Capa}
-            width={180}
-            height={180}
-          />
+          item.Miniatura && (
+            <Image
+              key={item.Index}
+              alt="Foto"
+              src={item.Miniatura}
+              width={180}
+              height={180}
+            />
+          )
         )}
       </motion.div>
     </div>

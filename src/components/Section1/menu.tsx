@@ -43,7 +43,7 @@ export default function Menu() {
       }}
     >
       <h1
-        className='absolute z-10 m-4 cursor-pointer text-lg bg-white font-extrabold hover:bg-gradient-to-tl from-slate-800 via-violet-500 to-zinc-400 bg-clip-text text-transparent'
+        className='fixed z-10 m-4 cursor-pointer text-lg bg-white font-extrabold hover:bg-gradient-to-tl from-slate-800 via-violet-500 to-zinc-400 bg-clip-text text-transparent'
         onClick={() => setIsOpen(isOpen => !isOpen)}
       >
         menu
@@ -52,7 +52,7 @@ export default function Menu() {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        className='bg-roxo/60 backdrop-blur-md absolute w-1/3 h-screen z-20 rounded-2xl'
+        className='bg-roxo/60 backdrop-blur-md fixed w-1/3 h-screen z-20 rounded-2xl'
       >
         <motion.div
           whileHover={{ rotate: 1 }}

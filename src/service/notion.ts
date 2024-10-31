@@ -25,6 +25,7 @@ export async function getPortifolio(): Promise<PortfolioItem[]> {
     Tech5: (post as NotionGet).properties.Tech5.rich_text[0]?.plain_text,
     Tech6: (post as NotionGet).properties.Tech6.rich_text[0]?.plain_text,
     Index: (post as NotionGet).properties.Index.rich_text[0]?.plain_text,
-    DescricaoBreve: (post as NotionGet).properties.DescricaoBreve.rich_text[0]?.plain_text
+    DescricaoBreve: (post as NotionGet).properties.DescricaoBreve.rich_text[0]?.plain_text,
+    Miniatura: (post as NotionGet).properties.Miniatura.rich_text[0]?.plain_text
   }));
 }
