@@ -24,9 +24,10 @@ export default function Projects() {
 
   return (
     <div
-      className="relative mx-40 border-y-2 border-gray-900 py-7 flex justify-between items-center overflow-hidden"
+      className="relative mx-40 border-y-2 border-gray-900 py-7 flex justify-between items-center overflow-hidden mb-7"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      id='portifolio'
     >
       <motion.div
         className={`${style} ml-6`}

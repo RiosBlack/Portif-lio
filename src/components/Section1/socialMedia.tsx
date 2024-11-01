@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 export default function SocialMedia() {
   return (
     <motion.div
-      className='absolute z-10 right-0 m-4 flex flex-col justify-center items-center'
+      className='fixed z-10 right-0 m-4 flex flex-col justify-center items-center'
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -24,7 +24,7 @@ export default function SocialMedia() {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <Link
-            href={'/'}
+            href={'https://www.instagram.com/riosblack/'}
           >
             <FaInstagram className='w-6 h-6 text-roxo' />
           </Link>
@@ -35,7 +35,7 @@ export default function SocialMedia() {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <Link
-            href={'/'}
+            href={'https://linkedin.com/in/riosblack'}
           >
             <FaLinkedin className='w-6 h-6 text-roxo' />
           </Link>
@@ -46,7 +46,7 @@ export default function SocialMedia() {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <Link
-            href={'/'}
+            href={'https://github.com/RiosBlack'}
           >
             <FaGithub className='w-6 h-6 text-roxo' />
           </Link>
@@ -57,13 +57,17 @@ export default function SocialMedia() {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <Link
-            href={'/'}
+            href={'https://wa.me/5575981414537?text=Ol%C3%A1%20Douglas,%20voc%C3%AA%20pode%20me%20ajudar?'}
           >
             <FaWhatsapp className='w-6 h-6 text-roxo' />
           </Link>
         </motion.div>
       </div>
-      <h2>Redes sociais</h2>
+      <h2
+        className='text-roxo text-center'
+      >
+        Redes sociais
+      </h2>
     </motion.div>
   )
 }

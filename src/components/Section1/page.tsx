@@ -9,7 +9,7 @@ import ButtonCv from './buttonCv'
 export default function Page() {
 
   return (
-    <div className='w-full h-screen relative'>
+    <div className='w-full h-screen relative' id='home'>
       <header>
         <Menu />
         <LogoMotion />

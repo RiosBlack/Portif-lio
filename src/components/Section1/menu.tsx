@@ -1,6 +1,7 @@
 'use client'
+import { IdCardIcon } from '@radix-ui/react-icons';
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { AiOutlineClose } from "react-icons/ai";
 
 export default function Menu() {
@@ -32,6 +33,11 @@ export default function Menu() {
 
   const [isOpen, setIsOpen] = useState(false)
 
+  const handleScroll = (id: string) => {
+    const secaoDestino = document.getElementById(id);
+    secaoDestino?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -52,13 +58,13 @@ export default function Menu() {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        className='bg-roxo/60 backdrop-blur-md fixed w-1/3 h-screen z-20 rounded-2xl'
+        className='bg-roxo/60 backdrop-blur-md fixed px-8 h-screen z-20 rounded-2xl'
       >
         <motion.div
           whileHover={{ rotate: 1 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          className='absolute w-full p-4 flex justify-end cursor-pointer'
+          className='absolute w-full pr-10 pt-3 flex justify-end cursor-pointer'
           onClick={() => setIsOpen(isOpen => !isOpen)}
         >
           <AiOutlineClose
@@ -74,7 +80,9 @@ export default function Menu() {
             <li
               className={liColor.className}
             >
-              Home
+              <button onClick={() => handleScroll('home')}>
+                Home
+              </button>
             </li>
           </motion.div>
           <motion.div
@@ -85,7 +93,9 @@ export default function Menu() {
             <li
               className={liColor.className}
             >
-              Sobre
+              <button onClick={() => handleScroll('portifolio')}>
+                Portifólio
+              </button>
             </li>
           </motion.div>
           <motion.div
@@ -96,7 +106,9 @@ export default function Menu() {
             <li
               className={liColor.className}
             >
-              Portifólio
+              <button onClick={() => handleScroll('habilidades')}>
+                Habilidades
+              </button>
             </li>
           </motion.div>
           <motion.div
@@ -107,7 +119,9 @@ export default function Menu() {
             <li
               className={liColor.className}
             >
-              Contato
+              <button onClick={() => handleScroll('contato')}>
+                Contato
+              </button>
             </li>
           </motion.div>
         </ul>

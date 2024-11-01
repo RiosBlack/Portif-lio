@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${oxaniumFont.className} antialiased relative`}
       >
-        <div className="absolute Z-10">
+        <div className="fixed Z-10">
           <BackgroundVideo />
         </div>
         <div className="absolute z-20">
