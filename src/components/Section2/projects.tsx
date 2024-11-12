@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { getPortifolio } from '@/service/notion'
 import { PortfolioItem } from "@/types/notion";
+import Link from "next/link";
 
 export default function Projects() {
   const [isHovered, setIsHovered] = useState(false); // Estado para controlar hover
   const style = 'text-1xl text-slate-600 font-semibold';
   const [data, setData] = useState<PortfolioItem[]>([]);
+  const [nameProject, setNameProject] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,6 +19,7 @@ export default function Projects() {
     };
     fetchData().then((data) => {
       setData(data);
+      setNameProject()
     }).catch((error) => {
       console.log(error);
     });
@@ -81,7 +84,12 @@ export default function Projects() {
         whileTap={{ scale: 0.9 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
-        Abrir
+        <Link
+          href={`/${data.map((item) => item.Index)}`}
+          about="Abrir projeto"
+        >
+          Abrir
+        </Link>
       </motion.div>
 
       <motion.div
