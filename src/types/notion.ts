@@ -34,7 +34,7 @@ export interface NotionGet {
     Tech6: { rich_text: { plain_text: string }[] };
     Index: { rich_text: { plain_text: string }[] };
     DescricaoBreve: { rich_text: { plain_text: string }[] };
-    Miniatura: { plain_text: { plain_text: string }[] };
+    Miniatura: { rich_text: { plain_text: string }[] };
   };
 }
 

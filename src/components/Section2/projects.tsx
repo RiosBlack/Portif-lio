@@ -10,7 +10,7 @@ export default function Projects() {
   const [isHovered, setIsHovered] = useState(false); // Estado para controlar hover
   const style = 'text-1xl text-slate-600 font-semibold';
   const [data, setData] = useState<PortfolioItem[]>([]);
-  const [nameProject, setNameProject] = useState('');
+  //const [nameProject, setNameProject] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +19,7 @@ export default function Projects() {
     };
     fetchData().then((data) => {
       setData(data);
-      setNameProject()
+      //setNameProject()
     }).catch((error) => {
       console.log(error);
     });

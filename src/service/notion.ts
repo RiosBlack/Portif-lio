@@ -29,3 +29,22 @@ export async function getPortifolio(): Promise<PortfolioItem[]> {
     Miniatura: (post as NotionGet).properties.Miniatura.rich_text[0]?.plain_text
   }));
 }
+function getOneFunction(Index: string) {
+  const response = await notion.databases.query({
+    database_id: databaseId,
+    filter:{
+      or: [
+        {
+          property: 'Index',
+          contains: Index
+        }
+      ]
+    }
+  });
+
+  return (
+    <div>notion</div>
+  )
+}}
+
+export default notion
