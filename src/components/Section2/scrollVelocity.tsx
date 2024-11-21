@@ -93,7 +93,7 @@ export function VelocityScroll({
 
     return (
       <div
-        className="w-full overflow-hidden whitespace-nowrap"
+        className="w-screen overflow-hidden whitespace-nowrap"
         ref={containerRef}
       >
         <motion.div className={cn("inline-block", className)} style={{ x }}>
@@ -108,7 +108,7 @@ export function VelocityScroll({
   }
 
   return (
-    <section className="absolute w-full">
+    <section className="absolute w-screen overflow-hidden">
       <ParallaxText baseVelocity={default_velocity} className={className}>
         {text1}
       </ParallaxText>

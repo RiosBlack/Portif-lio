@@ -71,7 +71,7 @@ export default function Menu() {
             className='text-white font-bold w-8 h-8'
           />
         </motion.div>
-        <ul className='flex flex-col justify-center items-center text-8xl font-bold space-y-8 text-white h-full'>
+        <ul className='flex flex-col justify-center items-center text-5xl md:text-7xl lg:text-8xl font-bold space-y-8 text-white h-full'>
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

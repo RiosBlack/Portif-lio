@@ -15,7 +15,7 @@ export default function ButtonCv() {
         opacity: 1
       }}
       transition={{ ease: "backIn", duration: 2 }}
-      className='absolute z-10 bottom-[37%] left-32 space-y-2'
+      className='absolute z-10 bottom-[60%] md:bottom-[50%] lg:bottom-[37%] left-5 md:left-14 lg:left-32 space-y-2'
     >
       <motion.div
         whileHover={{ scale: 1.1 }}

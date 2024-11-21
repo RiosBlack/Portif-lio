@@ -10,7 +10,7 @@ export default function ServicesIcons() {
   const style = 'flex flex-col justify-center items-center space-y-2'
 
   return (
-    <div className="flex text-3xl px-56 justify-between w-full my-8">
+    <div className="flex text-lg md:text-2xl lg:text-3xl px-2 md:px-32 lg:px-56 justify-between w-screen lg:w-full my-8">
       <div className={style}>
         <motion.div
           animate={{

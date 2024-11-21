@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { getPortifolio } from '@/service/notion'
 import { PortfolioItem } from "@/types/notion";
-import Link from "next/link";
 
 export default function Projects() {
   const [isHovered, setIsHovered] = useState(false); // Estado para controlar hover
-  const style = 'text-1xl text-slate-600 font-semibold';
+  const style = 'text-sm md:text-base lg:text-xl text-slate-600 font-semibold';
   const [data, setData] = useState<PortfolioItem[]>([]);
 
   useEffect(() => {
@@ -25,7 +24,7 @@ export default function Projects() {
 
   return (
     <div
-      className="relative mx-40 border-y-2 border-gray-900 flex flex-col overflow-hidden mb-7"
+      className="relative mx-0 md:mx-16 lg:mx-32 border-y-2 border-gray-900 flex flex-col overflow-hidden mb-7 w-screen md:w-10/12"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       id='portifolio'
@@ -33,7 +32,7 @@ export default function Projects() {
       {data.map((item) => (
         <div key={item.Index} className="flex justify-between items-center border-b-2 border-gray-900 py-7">
           <motion.div
-            className={`${style} ml-6`}
+            className={`${style} ml-2 md:ml-4 lg:ml-6`}
             animate={{
               x: isHovered ? 100 : 0,
             }}
@@ -43,7 +42,7 @@ export default function Projects() {
           </motion.div>
 
           <motion.div
-            className="text-3xl bg-gradient-to-tr from-slate-50 to-gray-400 bg-clip-text text-transparent font-semibold"
+            className="text-base md:text-lg lg:text-3xl bg-gradient-to-tr from-slate-50 to-gray-400 bg-clip-text text-transparent font-semibold"
             animate={{
               x: isHovered ? 100 : 0,
             }}
@@ -78,7 +77,7 @@ export default function Projects() {
           </motion.div>
 
           <motion.div
-            className="w-14 h-14 z-30 mr-6 bg-gradient-to-tr from-slate-50 to-gray-400 rounded-full flex justify-center items-center text-roxo font-bold cursor-pointer"
+            className="w-10 md:w-12 lg:w-14 h-5 md:h-10 lg:h-14 z-30 mr-6 bg-gradient-to-tr from-slate-50 to-gray-400 rounded-sm md:rounded-full flex justify-center items-center text-roxo font-bold cursor-pointer"
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.3 }}
             whileTap={{ scale: 0.9 }}
@@ -87,6 +86,7 @@ export default function Projects() {
             <a
               href={`/${item.Index}`}
               about="Abrir projeto"
+              className="text-sm md:text-base lg:text-lg"
             >
               Abrir
             </a>
@@ -104,13 +104,14 @@ export default function Projects() {
           >
             {
               item.Miniatura && (
-                <Image
-                  key={item.Index}
-                  alt="Foto"
-                  src={item.Miniatura}
-                  width={180}
-                  height={180}
-                />
+                <div className="w-44 h-36 relative">
+                  <Image
+                    key={item.Index}
+                    alt="Foto"
+                    src={item.Miniatura}
+                    fill
+                  />
+                </div>
               )
             }
           </motion.div>

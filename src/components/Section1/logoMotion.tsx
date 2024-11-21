@@ -2,9 +2,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-type Props = {}
-
-export default function LogoMotion({ }: Props) {
+export default function LogoMotion() {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -14,13 +12,12 @@ export default function LogoMotion({ }: Props) {
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01]
       }}
+      className='relative w-10 h-10 md:w-16 md:h-16'
     >
       <Image
         alt='Logo'
         src={'/logo.svg'}
-        width={69}
-        height={70}
-        className='absolute z-10 right-[47%] m-2'
+        fill
       />
     </motion.div>
   )

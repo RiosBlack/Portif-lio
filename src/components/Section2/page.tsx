@@ -34,14 +34,14 @@ export default function Page() {
           <NameService />
           <ServicesIcons />
           <h2
-            className='text-roxo text-3xl px-40 text-center py-7'
+            className='text-roxo text-xl md:text-2xl lg:text-3xl px-5 md:pX-20 lg:px-40 text-center py-7 w-screen lg:w-full'
           >
             Levando pessoas e ideias para o mundo digital com <span className='text-white'>criatividade</span> e <span className='text-white'>inovação</span>, integrando <span className='text-white'>design</span>, código, <span className='text-white'>animação</span> e interatividade para oferecer sempre o melhor resultado.
           </h2>
         </div>
         <div>
           <h2
-            className='text-roxo text-3xl px-40 mb-7 pt-20'
+            className='text-roxo text-lg md:text-2xl lg:text-3xl px-10 md:px-24 lg:px-40 mb-7 pt-20'
           >
             Portifólio:
           </h2>
@@ -50,9 +50,9 @@ export default function Page() {
       <div className='mb-20'>
         <Projects />
       </div>
-      <div className='w-full overflow-hidden border-y-2 h-96 border-gray-900 py-20' id="habilidades">
+      <div className='w-screen overflow-hidden border-y-2 h-72 md:h-96 border-gray-900 py-20' id="habilidades">
         <h2
-          className='text-roxo text-3xl px-40 mb-7'
+          className='text-roxo text-3xl pl-5 md:pl-24 lg:pl-40 mb-7'
         >
           Habilidades:
         </h2>

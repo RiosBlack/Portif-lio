@@ -6,7 +6,7 @@ export default function Page() {
 
   return (
     <div
-      className='bg-roxoEscuro bg-opacity-70 border-y-2 border-gray-900 mt-[900px] py-20'
+      className='bg-roxoEscuro bg-opacity-70 border-y-2 border-gray-900 mt-[600px] md:mt-[450px] lg:mt-[1100px] py-20 w-screen'
     >
       <div
         className="flex flex-col items-center"
@@ -17,7 +17,7 @@ export default function Page() {
           text="E ai vamos conversar?"
           delay={0}
         />
-        <div className="flex space-x-14" id='contato'>
+        <div className="grid md:flex space-x-14" id='contato'>
           <div className="flex flex-col items-center">
             <SocialCard
               delay={6000}
@@ -72,6 +72,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
