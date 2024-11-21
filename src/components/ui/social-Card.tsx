@@ -25,11 +25,15 @@ export default function SocialCard({ icon, link, delay }: Props) {
     }, {
       threshold: 1.0,
     });
-
-    observer.observe(document.getElementById("typing-animation"));
+    const element = document.getElementById("typing-animation");
+    if (element) {
+      observer.observe(element);
+    }
 
     return () => {
-      observer.unobserve(document.getElementById("typing-animation"));
+      if (element) {
+        observer.unobserve(element);
+      }
     };
   }, []);
 

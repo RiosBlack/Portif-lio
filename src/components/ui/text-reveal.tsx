@@ -51,6 +51,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
 
 interface WordProps {
   children: ReactNode;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   progress: any;
   range: [number, number];
 }

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Oxanium } from 'next/font/google'
-import BackgroundVideo from "@/components/Section1/backgroundVideo";
-
 
 const oxaniumFont = Oxanium({
   subsets: ['latin'],

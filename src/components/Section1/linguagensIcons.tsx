@@ -3,9 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from "framer-motion";
 
-type Props = {}
-
-export default function LinguagensIcons({ }: Props) {
+export default function LinguagensIcons() {
   return (
     <motion.div
       initial={{

@@ -10,6 +10,7 @@ export async function getPortifolio(): Promise<PortfolioItem[]> {
     database_id: databaseId,
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return response.results.map((post: any) => ({
     Projeto: (post as NotionGet).properties.Projeto.title[0]?.text?.content,
     Capa: (post as NotionGet).properties.Capa.rich_text[0]?.plain_text,
@@ -41,6 +42,7 @@ export async function getPortifolioById(id: string): Promise<PortfolioItem[]> {
     }
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return responseDate.results.map((post: any) => ({
     Projeto: (post as NotionGet).properties.Projeto.title[0]?.text?.content,
     Capa: (post as NotionGet).properties.Capa.rich_text[0]?.plain_text,
