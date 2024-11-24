@@ -16,7 +16,7 @@ export default function LogoMotion() {
     >
       <Image
         alt='Logo'
-        src={'/logo.svg'}
+        src={'/Logo.svg'}
         fill
       />
     </motion.div>

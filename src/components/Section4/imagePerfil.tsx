@@ -12,7 +12,7 @@ export default function ImagePerfil() {
     >
       <Image
         alt="Perfil"
-        src={'/perfil.png'}
+        src={'/Perfil.png'}
         width={200}
         height={200}
       />

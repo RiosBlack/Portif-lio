@@ -16,7 +16,7 @@ export default function LinguagensIcons() {
       className='absolute z-10 w-96 h-96 bottom-2 right-[3%] md:right-[28%] lg:top-[25%] lg:right-[12%] overflow-hidden'>
       <Image
         alt='Linhas'
-        src={'/linhas.svg'}
+        src={'/Linhas.svg'}
         fill
         className='absolute z-10'
       />
