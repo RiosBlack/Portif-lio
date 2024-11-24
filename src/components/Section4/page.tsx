@@ -13,11 +13,11 @@ export default function Page() {
       >
         <ImagePerfil />
         <TypingAnimation
-          className="text-roxo text-3xl my-5 px-40 mb-7"
+          className="text-roxo text-2xl md:text-3xl my-5 px-40 mb-7"
           text="E ai vamos conversar?"
           delay={0}
         />
-        <div className="grid md:flex space-x-14" id='contato'>
+        <div className="grid justify-items-center content-center space-y-2 md:flex justify-center items-center md:space-x-14" id='contato'>
           <div className="flex flex-col items-center">
             <SocialCard
               delay={6000}
@@ -26,7 +26,7 @@ export default function Page() {
               key={0}
             />
             <TypingAnimation
-              className="text-white text-3xl my-2"
+              className="text-white text-2xl md:text-3xl my-2"
               text="Instagram"
               delay={5000}
             />
@@ -39,7 +39,7 @@ export default function Page() {
               key={0}
             />
             <TypingAnimation
-              className="text-white text-3xl my-2"
+              className="text-white text-2xl md:text-3xl my-2"
               text="Linkedin"
               delay={6000}
             />
@@ -52,7 +52,7 @@ export default function Page() {
               key={0}
             />
             <TypingAnimation
-              className="text-white text-3xl my-2"
+              className="text-white text-2xl md:text-3xl my-2"
               text="GitHub"
               delay={7000}
             />
@@ -65,7 +65,7 @@ export default function Page() {
               key={0}
             />
             <TypingAnimation
-              className="text-white text-3xl my-2"
+              className="text-white text-2xl md:text-3xl my-2"
               text="WhatsApp"
               delay={8000}
             />

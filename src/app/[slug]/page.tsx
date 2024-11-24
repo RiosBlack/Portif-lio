@@ -44,7 +44,7 @@ export default function Page() {
         <div className="bg-gradient-to-b from-black to-transparent absolute z-20 -top-2 h-14 w-full"></div>
       </div>
       <div className="relative h-24 grid items-end z-20">
-        {data.map((item) => <h1 key={item.Index} className="text-8xl text-roxo font-semibold absolute -top-8 ml-6">{item.Projeto}</h1>)}
+        {data.map((item) => <h1 key={item.Index} className="text-2xl md:text-4xl lg:text-7xl text-roxo font-semibold absolute -top-8 ml-6">{item.Projeto}</h1>)}
         <div className="overflow-hidden">
           <motion.div
             whileHover={{ scale: 1.04 }}
@@ -52,7 +52,7 @@ export default function Page() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             {data.map((item) =>
-              <Link className="w-44 rounded-3xl bg-gradient-to-r from-gray-100 to-gray-300 ml-16 mb-4 text-lg text-azulClaro p-4"
+              <Link className="w-44 rounded-3xl bg-gradient-to-r from-gray-100 to-gray-300 ml-5 mb:ml-16 mb-4 text-lg text-azulClaro p-4"
                 href={item.Link ?? ''}
                 key={item.Index}
               >
@@ -62,8 +62,8 @@ export default function Page() {
           </motion.div>
         </div>
       </div>
-      <div className="flex mt-10 bg-roxoEscuro bg-opacity-70 space-x-7">
-        <div className="flex-1 pl-7">
+      <div className="grid md:flex mt-10 bg-roxoEscuro bg-opacity-70 space-x-7">
+        <div className="flex-1 pl-7 pr-7 md:pr-0">
           <h1 className="text-lg text-white">
             O projeto:
           </h1>
